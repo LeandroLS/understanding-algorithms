@@ -6,6 +6,12 @@ import (
 	"log"
 )
 
+/*
+* Instead of walking all the list to found a item, we just get the middle item of this list and see if this item is the desired.
+* if not, we saw if he is "higher" or "lower", if "lower", we do the same again with all the items that are higher than this one.
+* If "higher", we do the same again with all the items that are lower than this one
+ */
+
 func main() {
 	orderedList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	result, err := binarySearch(orderedList, 2)
